@@ -21,8 +21,12 @@ dependencies {
     compile 'org.apache.openejb:tomee-embedded:1.7.2'
     compile 'org.apache.openejb:openejb-cxf-rs:4.7.2'
     compile 'org.apache.openejb:tomee-jaxrs:1.7.2'
+    
     compile 'org.jboss.shrinkwrap:shrinkwrap-depchain:1.2.3'
+    
     compile 'org.codehaus.groovy:groovy-all:2.4.4'
+    
+    compile 'org.eclipse.persistence:org.eclipse.persistence.jpa:2.6.1'
 }
 
 mainClassName = "org.willcodeforbeer.Main"

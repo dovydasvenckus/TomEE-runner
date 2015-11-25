@@ -23,14 +23,14 @@ public class TomEEApplication {
         container = new Container();
         container.setup(configuration);
  
-        final File app = new File(Files.createTempDirectory("app").toFile().getAbsolutePath());
+        final File app = new File(Files.createTempDirectory("time-logger").toFile().getAbsolutePath());
         app.deleteOnExit();
  
-        File target = new File(app, "app.war");
+        File target = new File(app, "time-logger.war");
         archive.as(ZipExporter.class).exportTo(target, true);
         container.start();
  
-        container.deploy("app", target);
+        container.deploy("time-logger", target);
         container.await();
  
       } catch (Exception e) {
