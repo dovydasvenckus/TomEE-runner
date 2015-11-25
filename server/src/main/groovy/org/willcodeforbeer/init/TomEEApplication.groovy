@@ -1,4 +1,4 @@
-package org.willcodeforbeer;
+package org.willcodeforbeer.init;
 import java.io.File;
 import java.nio.file.Files;
 
@@ -56,8 +56,14 @@ public class TomEEApplication {
     });
   }
  
-  public static void run(Class<?> ... clazzes) {
-    run(ShrinkWrap.create(WebArchive.class).addClasses(clazzes));
+  public static void run(Package... packages) {
+    WebArchive archive = ShrinkWrap.create(WebArchive.class);
+    
+    packages.each{
+        archive.addPackage(it);   
+    }
+    
+    run(archive);
   }
  
   public static void run(WebArchive archive) {

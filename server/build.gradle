@@ -9,6 +9,7 @@
 
 
 apply plugin: 'groovy'
+apply plugin: 'war'
 apply plugin: 'application'
 
 version = '0.1'
@@ -25,8 +26,6 @@ dependencies {
     compile 'org.jboss.shrinkwrap:shrinkwrap-depchain:1.2.3'
     
     compile 'org.codehaus.groovy:groovy-all:2.4.4'
-    
-    compile 'org.eclipse.persistence:org.eclipse.persistence.jpa:2.6.1'
 }
 
-mainClassName = "org.willcodeforbeer.Main"
+mainClassName = "org.willcodeforbeer.init.Main"

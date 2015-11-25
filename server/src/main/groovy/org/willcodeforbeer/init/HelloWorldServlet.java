@@ -1,4 +1,4 @@
-package org.willcodeforbeer;
+package org.willcodeforbeer.init;
 
 import java.io.IOException;
 

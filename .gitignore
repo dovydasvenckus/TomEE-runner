@@ -8,6 +8,12 @@ gradlew.bat
 .nb-gradle-properties
 .nb-gradle/
 
+#Eclipse
+.project
+.settings
+.classpath
+bin
+
 # Ignore Gradle GUI config
 gradle-app.setting
 

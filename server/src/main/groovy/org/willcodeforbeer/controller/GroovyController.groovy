@@ -1,4 +1,4 @@
-package org.willcodeforbeer
+package org.willcodeforbeer.controller
 
 import javax.ejb.Stateless;
 import javax.ws.rs.GET;
