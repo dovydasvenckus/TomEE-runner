@@ -2,7 +2,7 @@
 <persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
   <persistence-unit name="chapter02PU" transaction-type="RESOURCE_LOCAL">
     <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
-    <class>org.willcodeforbeer.domain.Project</class>
+    <class>org.willcodeforbeer.timelogger.domain.Project</class>
     <properties>
       <property name="openjpa.ConnectionURL" value="jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"/>
       <property name="openjpa.ConnectionDriverName" value="org.h2.Driver"/>
