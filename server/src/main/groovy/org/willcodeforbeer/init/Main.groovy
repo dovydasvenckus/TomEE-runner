@@ -1,12 +1,16 @@
 package org.willcodeforbeer.init;
 
-import groovy.transform.CompileStatic
-import org.willcodeforbeer.*
 import org.willcodeforbeer.controller.SampleController
+import org.willcodeforbeer.domain.Project
 
-@CompileStatic
 public class Main {
 	static void main(String... args) {
-            TomEEApplication.run(org.willcodeforbeer.controller.SampleController.class.package);
+            TomEEApplication.run([
+                    org.willcodeforbeer.controller.SampleController.class.package,
+
+                    org.willcodeforbeer.domain.Project.class.package
+                ],
+                
+                [[currentLocation: "META-INF/persistence.xml", warLocation: "META-INF/persistence.xml"]]);
 	}
 }

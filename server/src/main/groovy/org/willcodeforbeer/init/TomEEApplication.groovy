@@ -56,17 +56,21 @@ public class TomEEApplication {
     });
   }
  
-  public static void run(Package... packages) {
+  def static run(List<Package> packages, List<Map> resources) {
     WebArchive archive = ShrinkWrap.create(WebArchive.class);
     
     packages.each{
         archive.addPackage(it);   
     }
     
+    resources.each{
+        archive.addAsResource(it.currentLocation, it.warLocation)
+    }
+    
     run(archive);
   }
  
-  public static void run(WebArchive archive) {
+  def static run(WebArchive archive) {
     startAndDeploy(archive);
   }
 }
