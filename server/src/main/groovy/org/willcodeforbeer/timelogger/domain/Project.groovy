@@ -1,4 +1,4 @@
-package org.willcodeforbeer.domain
+package org.willcodeforbeer.timelogger.domain
 
 import javax.persistence.*;
 import javax.persistence.Column

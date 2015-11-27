@@ -18,6 +18,8 @@ dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.4.4'
     
     runtime 'com.h2database:h2:1.4.190'
+    
+    testCompile 'junit:junit:4.12'
 }
 
 mainClassName = "org.willcodeforbeer.init.Main"

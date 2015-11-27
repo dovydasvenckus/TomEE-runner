@@ -1,4 +1,4 @@
-package org.willcodeforbeer.init;
+package org.willcodeforbeer.timelogger.init;
 import java.io.File;
 import java.nio.file.Files;
 
