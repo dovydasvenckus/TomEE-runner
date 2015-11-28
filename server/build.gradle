@@ -12,6 +12,8 @@ dependencies {
     compile 'org.apache.openejb:tomee-embedded:1.7.2'
     compile 'org.apache.openejb:openejb-cxf-rs:4.7.2'
     compile 'org.apache.openejb:tomee-jaxrs:1.7.2'
+
+    compile 'org.eclipse.persistence:eclipselink:2.6.1'
     
     compile 'org.jboss.shrinkwrap:shrinkwrap-depchain:1.2.3'
     
@@ -22,4 +24,4 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-mainClassName = "org.willcodeforbeer.init.Main"
+mainClassName = "org.willcodeforbeer.timelogger.init.Main"

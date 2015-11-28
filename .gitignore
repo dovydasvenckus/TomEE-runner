@@ -14,6 +14,10 @@ gradlew.bat
 .classpath
 bin
 
+#Intellij
+.idea
+*.iml
+
 # Ignore Gradle GUI config
 gradle-app.setting
 

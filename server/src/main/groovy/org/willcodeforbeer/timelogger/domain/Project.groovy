@@ -11,5 +11,7 @@ class Project {
     
     @Column(nullable = false)
     String name
+
+    String description
 }
 
