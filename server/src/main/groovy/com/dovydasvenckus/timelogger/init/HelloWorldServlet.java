@@ -1,4 +1,4 @@
-package org.willcodeforbeer.timelogger.init;
+package com.dovydasvenckus.timelogger.init;
 
 import java.io.IOException;
 

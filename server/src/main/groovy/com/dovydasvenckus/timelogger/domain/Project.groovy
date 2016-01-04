@@ -1,4 +1,4 @@
-package org.willcodeforbeer.timelogger.domain
+package com.dovydasvenckus.timelogger.domain
 
 import javax.persistence.*;
 import javax.persistence.Column

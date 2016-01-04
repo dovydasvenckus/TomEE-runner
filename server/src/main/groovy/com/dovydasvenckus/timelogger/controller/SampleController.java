@@ -1,4 +1,4 @@
-package org.willcodeforbeer.timelogger.controller;
+package com.dovydasvenckus.timelogger.controller;
 
 import javax.ejb.Stateless;
 import javax.ws.rs.GET;
