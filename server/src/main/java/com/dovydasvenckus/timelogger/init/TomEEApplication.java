@@ -1,7 +1,9 @@
 package com.dovydasvenckus.timelogger.init;
 import java.io.File;
 import java.nio.file.Files;
+import java.util.List;
 
+import com.dovydasvenckus.timelogger.helper.war.Resource;
 import org.apache.tomee.embedded.Configuration;
 import org.apache.tomee.embedded.Container;
 import org.jboss.shrinkwrap.api.Archive;
@@ -56,21 +58,17 @@ public class TomEEApplication {
     });
   }
  
-  def static run(List<Package> packages, List<Map> resources) {
+  public static void run(List<Package> packages, List<Resource> resources) {
     WebArchive archive = ShrinkWrap.create(WebArchive.class);
     
-    packages.each{
-        archive.addPackage(it);   
-    }
-    
-    resources.each{
-        archive.addAsResource(it.currentLocation, it.warLocation)
-    }
+    packages.forEach((pack) -> archive.addPackage(pack));
+
+    resources.forEach((resource) -> archive.addAsResource(resource.getLocation(), resource.getLocationInWar()));
     
     run(archive);
   }
  
-  def static run(WebArchive archive) {
+  public static void run(WebArchive archive) {
     startAndDeploy(archive);
   }
 }
