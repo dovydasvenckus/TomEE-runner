@@ -4,9 +4,12 @@ import javax.persistence.*;
 import javax.persistence.Column;
 
 @Entity
+@Table( name = "books")
+@NamedQuery(name = "findAll", query = "SELECT p FROM Project")
 public class Project {
     
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
     Long id;
     
     @Column(nullable = false)
