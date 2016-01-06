@@ -64,7 +64,7 @@ public class TomEEApplication {
     packages.forEach((pack) -> archive.addPackage(pack));
 
     resources.forEach((resource) -> archive.addAsResource(resource.getLocation(), resource.getLocationInWar()));
-    
+      System.err.println(archive.getContent());
     run(archive);
   }
  

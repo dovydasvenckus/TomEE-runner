@@ -15,6 +15,7 @@ public class Main {
 
         List<Resource> resources = new ArrayList<>();
         resources.add(new Resource("META-INF/persistence.xml"));
+        System.err.println(resources.get(0).getLocationInWar());
         TomEEApplication.run(packages, resources);
     }
 }

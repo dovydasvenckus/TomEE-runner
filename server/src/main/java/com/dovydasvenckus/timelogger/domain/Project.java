@@ -5,7 +5,7 @@ import javax.persistence.Column;
 
 @Entity
 @Table( name = "books")
-@NamedQuery(name = "findAll", query = "SELECT p FROM Project")
+@NamedQuery(name = "Project.findAll", query = "SELECT p FROM Project p")
 public class Project {
     
     @Id
