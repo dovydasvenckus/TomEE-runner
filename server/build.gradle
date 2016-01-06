@@ -9,14 +9,12 @@ repositories {
 }
 
 dependencies {
-    compile 'org.apache.openejb:tomee-embedded:1.7.2'
-    compile 'org.apache.openejb:openejb-cxf-rs:4.7.2'
-    compile 'org.apache.openejb:tomee-jaxrs:1.7.2'
+    compile 'org.apache.openejb:tomee-embedded:1.7.3'
+    runtime 'org.apache.openejb:tomee-jaxrs:1.7.3'
+
+    compile 'org.jboss.shrinkwrap:shrinkwrap-depchain:1.2.3'
 
     compile 'org.eclipse.persistence:eclipselink:2.6.1'
-    
-    compile 'org.jboss.shrinkwrap:shrinkwrap-depchain:1.2.3'
-    
     runtime 'com.h2database:h2:1.4.190'
     
     testCompile 'junit:junit:4.12'
