@@ -1,5 +1,6 @@
 package com.dovydasvenckus.timelogger.domain;
 
+import java.util.List;
 import javax.persistence.*;
 import javax.persistence.Column;
 
@@ -10,12 +11,25 @@ public class Project {
     
     @Id
     @GeneratedValue
-    Long id;
+    private Long id;
     
     @Column(nullable = false)
-    String name;
+    private String name;
 
-    String description;
+    private String description;
+    
+    @JoinTable( name = "project_tags",
+            joinColumns = @JoinColumn( name = "project_id"),
+            inverseJoinColumns = @JoinColumn( name = "tag_id")
+    )
+    @OrderBy( "name DESC")
+    private List<Tag> tags;
+    
+    @OneToMany( orphanRemoval = true, 
+            cascade = {CascadeType.PERSIST, CascadeType.DETACH, 
+                       CascadeType.MERGE, CascadeType.REFRESH})
+    @JoinColumn( name = "project_id")
+    private List<TimeLogEntry> timeLogEntries;
 
     public Project(){}
 
@@ -46,6 +60,22 @@ public class Project {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+    public List<TimeLogEntry> getTimeLogEntries() {
+        return timeLogEntries;
+    }
+
+    public void setTimeLogEntries(List<TimeLogEntry> timeLogEntries) {
+        this.timeLogEntries = timeLogEntries;
     }
 }
 
