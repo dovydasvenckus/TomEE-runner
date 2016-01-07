@@ -3,7 +3,7 @@ package com.dovydasvenckus.timelogger.unit;
 import com.dovydasvenckus.timelogger.domain.Project;
 import com.dovydasvenckus.timelogger.domain.Tag;
 import com.dovydasvenckus.timelogger.domain.TimeLogEntry;
-import java.util.ArrayList;
+import com.google.common.collect.Lists;
 import java.util.List;
 import java.util.stream.Collectors;
 import javax.persistence.EntityManager;
@@ -230,9 +230,7 @@ public class JpaApiTest {
         em.refresh(project);
         
         List<String> names = project.getTags().stream().map(Tag::getName).collect(Collectors.toList());
-        List<String> expected = new ArrayList<>();
-        expected.add("A Tag name");
-        expected.add("B Tag name");
+        List<String> expected = Lists.newArrayList("A Tag name", "B Tag name");
         
         assertEquals(2, project.getTags().size());
         assertEquals(expected, names);

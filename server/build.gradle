@@ -11,6 +11,8 @@ repositories {
 dependencies {
     compile 'org.apache.openejb:tomee-embedded:1.7.3'
     runtime 'org.apache.openejb:tomee-jaxrs:1.7.3'
+    
+    compile 'com.google.guava:guava:19.0'
 
     compile 'org.jboss.shrinkwrap:shrinkwrap-depchain:1.2.3'
 
