@@ -1,5 +1,6 @@
 package com.dovydasvenckus.timelogger.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.*;
 import javax.persistence.Column;
@@ -22,8 +23,8 @@ public class Project {
             joinColumns = @JoinColumn( name = "project_id"),
             inverseJoinColumns = @JoinColumn( name = "tag_id")
     )
-    @OrderBy( "name DESC")
-    private List<Tag> tags;
+    @OrderBy( "name ASC")
+    private List<Tag> tags = new ArrayList<>();
     
     @OneToMany( orphanRemoval = true, 
             cascade = {CascadeType.PERSIST, CascadeType.DETACH, 

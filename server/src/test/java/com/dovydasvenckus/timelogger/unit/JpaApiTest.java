@@ -1,8 +1,11 @@
 package com.dovydasvenckus.timelogger.unit;
 
 import com.dovydasvenckus.timelogger.domain.Project;
+import com.dovydasvenckus.timelogger.domain.Tag;
 import com.dovydasvenckus.timelogger.domain.TimeLogEntry;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -208,5 +211,30 @@ public class JpaApiTest {
         em.flush();
         List<TimeLogEntry> entries = em.createQuery("SELECT t FROM TimeLogEntry t", TimeLogEntry.class).getResultList();
         assertEquals(1, entries.size());
+    }
+    
+    @Test
+    public void orderingOnRelationshipShouldWork(){
+        Project project = new Project("Title", "Descr");
+        Tag tag1 = new Tag("B Tag name");
+        
+        Tag tag2 = new Tag("A Tag name");
+        
+        em.persist(project);
+        em.persist(tag1);
+        em.persist(tag2);
+        
+        project.getTags().add(tag1);
+        project.getTags().add(tag2);
+        em.flush();
+        em.refresh(project);
+        
+        List<String> names = project.getTags().stream().map(Tag::getName).collect(Collectors.toList());
+        List<String> expected = new ArrayList<>();
+        expected.add("A Tag name");
+        expected.add("B Tag name");
+        
+        assertEquals(2, project.getTags().size());
+        assertEquals(expected, names);
     }
 }

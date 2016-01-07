@@ -18,6 +18,12 @@ public class Tag {
     
     @ManyToMany( mappedBy = "tags")
     private List<Project> projects;
+    
+    public Tag(){}
+    
+    public Tag(String name){
+        this.name = name;
+    }
 
     public Long getId() {
         return id;
