@@ -28,7 +28,7 @@ public class TomEEApplication {
         final File app = new File(Files.createTempDirectory("time-logger").toFile().getAbsolutePath());
         app.deleteOnExit();
  
-        File target = new File(app, "time-logger.war");
+        File target = new File(app, "ROOT.war");
         archive.as(ZipExporter.class).exportTo(target, true);
         container.start();
  
@@ -61,10 +61,12 @@ public class TomEEApplication {
   public static void run(List<Package> packages, List<Resource> resources) {
     WebArchive archive = ShrinkWrap.create(WebArchive.class);
     
+    archive.setWebXML(new File("src/main/webapp", "WEB-INF/web.xml"));
+    archive.addAsWebResource(new File("src/main/webapp", "index.html"));
+    
     packages.forEach((pack) -> archive.addPackage(pack));
 
     resources.forEach((resource) -> archive.addAsResource(resource.getLocation(), resource.getLocationInWar()));
-      System.err.println(archive.getContent());
     run(archive);
   }
  
