@@ -1,9 +1,9 @@
 package com.dovydasvenckus.timelogger.init;
+import com.dovydasvenckus.timelogger.helper.war.AbstractResource;
 import java.io.File;
 import java.nio.file.Files;
 import java.util.List;
 
-import com.dovydasvenckus.timelogger.helper.war.Resource;
 import org.apache.tomee.embedded.Configuration;
 import org.apache.tomee.embedded.Container;
 import org.jboss.shrinkwrap.api.Archive;
@@ -58,15 +58,11 @@ public class TomEEApplication {
     });
   }
  
-  public static void run(List<Package> packages, List<Resource> resources) {
+  public static void run(List<AbstractResource> webAppResources) {
     WebArchive archive = ShrinkWrap.create(WebArchive.class);
     
-    archive.setWebXML(new File("src/main/webapp", "WEB-INF/web.xml"));
-    archive.addAsWebResource(new File("src/main/webapp", "index.html"));
+    webAppResources.forEach((resource) -> resource.addToWar(archive));
     
-    packages.forEach((pack) -> archive.addPackage(pack));
-
-    resources.forEach((resource) -> archive.addAsResource(resource.getLocation(), resource.getLocationInWar()));
     run(archive);
   }
  

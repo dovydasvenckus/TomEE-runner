@@ -7,6 +7,8 @@ gradlew.bat
 #Netbeans
 .nb-gradle-properties
 .nb-gradle/
+classes
+nbproject
 
 #Eclipse
 .project

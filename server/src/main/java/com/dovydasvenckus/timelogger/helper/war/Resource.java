@@ -1,6 +1,8 @@
 package com.dovydasvenckus.timelogger.helper.war;
 
-public class Resource {
+import org.jboss.shrinkwrap.api.spec.WebArchive;
+
+public class Resource extends AbstractResource{
     String location;
     String locationInWar;
 
@@ -28,5 +30,10 @@ public class Resource {
 
     public void setLocationInWar(String locationInWar) {
         this.locationInWar = locationInWar;
+    }
+
+    @Override
+    public void addToWar(WebArchive archive) {
+        archive.addAsResource(location, locationInWar);
     }
 }
