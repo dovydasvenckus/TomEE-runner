@@ -1,5 +1,5 @@
 package com.dovydasvenckus.timelogger.init;
-import com.dovydasvenckus.timelogger.helper.war.AbstractResource;
+import com.dovydasvenckus.timelogger.helper.war.resources.AbstractResource;
 import java.io.File;
 import java.nio.file.Files;
 import java.util.List;
