@@ -5,13 +5,22 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 
 public class WebResource extends AbstractResource{
     String path;
+    String targetPath = null;
     
     public WebResource(String path){
         this.path = path;
     }
+    
+    public WebResource(String path, String targetPath){
+        this.path = path;
+        this.targetPath = targetPath;
+    }
+    
     @Override
     public void addToWar(WebArchive archive) {
-        archive.addAsWebResource(new File(path));
+        if (targetPath != null)
+            archive.addAsWebResource(new File(path), targetPath);
+        else archive.addAsWebResource(new File(path));
     }
     
 }
