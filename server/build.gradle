@@ -9,12 +9,9 @@ repositories {
 }
 
 dependencies {
-    compile 'org.apache.openejb:tomee-embedded:1.7.3'
-    runtime 'org.apache.openejb:tomee-jaxrs:1.7.3'
-    
-    compile 'com.google.guava:guava:19.0'
+    compile project(':tomEERun')
 
-    compile 'org.jboss.shrinkwrap:shrinkwrap-depchain:1.2.3'
+    compile 'com.google.guava:guava:19.0'
 
     compile 'org.eclipse.persistence:eclipselink:2.6.1'
     runtime 'com.h2database:h2:1.4.190'

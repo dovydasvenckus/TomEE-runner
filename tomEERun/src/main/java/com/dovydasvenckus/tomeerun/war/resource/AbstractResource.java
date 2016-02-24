@@ -1,4 +1,4 @@
-package com.dovydasvenckus.timelogger.helper.war.resources;
+package com.dovydasvenckus.tomeerun.war.resource;
 
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 

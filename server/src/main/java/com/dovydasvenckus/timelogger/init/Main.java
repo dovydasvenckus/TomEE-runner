@@ -2,11 +2,12 @@ package com.dovydasvenckus.timelogger.init;
 
 import com.dovydasvenckus.timelogger.controller.SampleController;
 import com.dovydasvenckus.timelogger.domain.Project;
-import com.dovydasvenckus.timelogger.helper.war.resources.AbstractResource;
-import com.dovydasvenckus.timelogger.helper.war.resources.PackageResource;
-import com.dovydasvenckus.timelogger.helper.war.resources.Resource;
-import com.dovydasvenckus.timelogger.helper.war.resources.WebResource;
-import com.dovydasvenckus.timelogger.helper.war.resources.WebXmlResource;
+import com.dovydasvenckus.tomeerun.init.TomEEApplication;
+import com.dovydasvenckus.tomeerun.war.resource.AbstractResource;
+import com.dovydasvenckus.tomeerun.war.resource.PackageResource;
+import com.dovydasvenckus.tomeerun.war.resource.Resource;
+import com.dovydasvenckus.tomeerun.war.resource.WebResource;
+import com.dovydasvenckus.tomeerun.war.resource.WebXmlResource;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.dovydasvenckus.timelogger.helper.war.resources;
+package com.dovydasvenckus.tomeerun.war.resource;
 
 import java.nio.file.FileVisitResult;
 import java.nio.file.Path;
