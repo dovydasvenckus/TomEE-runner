@@ -1,8 +1,8 @@
-package com.dovydasvenckus.timelogger.unit;
+package com.dovydasvenckus.sample.unit;
 
-import com.dovydasvenckus.timelogger.domain.Project;
-import com.dovydasvenckus.timelogger.domain.Tag;
-import com.dovydasvenckus.timelogger.domain.TimeLogEntry;
+import com.dovydasvenckus.sample.domain.Project;
+import com.dovydasvenckus.sample.domain.Tag;
+import com.dovydasvenckus.sample.domain.TimeLogEntry;
 import com.google.common.collect.Lists;
 import java.util.List;
 import java.util.stream.Collectors;

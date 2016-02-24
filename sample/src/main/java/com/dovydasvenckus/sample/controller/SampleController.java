@@ -1,4 +1,4 @@
-package com.dovydasvenckus.timelogger.controller;
+package com.dovydasvenckus.sample.controller;
 
 import javax.ejb.Stateless;
 import javax.ws.rs.GET;

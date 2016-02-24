@@ -1,4 +1,4 @@
-package com.dovydasvenckus.timelogger.domain;
+package com.dovydasvenckus.sample.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

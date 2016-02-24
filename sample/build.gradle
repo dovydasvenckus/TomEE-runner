@@ -19,4 +19,4 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-mainClassName = "com.dovydasvenckus.timelogger.init.Main"
+mainClassName = "com.dovydasvenckus.sample.init.Main"

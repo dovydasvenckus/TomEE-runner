@@ -1,7 +1,7 @@
-package com.dovydasvenckus.timelogger.init;
+package com.dovydasvenckus.sample.init;
 
-import com.dovydasvenckus.timelogger.controller.SampleController;
-import com.dovydasvenckus.timelogger.domain.Project;
+import com.dovydasvenckus.sample.controller.SampleController;
+import com.dovydasvenckus.sample.domain.Project;
 import com.dovydasvenckus.tomeerun.init.TomEEApplication;
 import com.dovydasvenckus.tomeerun.war.resource.AbstractResource;
 import com.dovydasvenckus.tomeerun.war.resource.PackageResource;

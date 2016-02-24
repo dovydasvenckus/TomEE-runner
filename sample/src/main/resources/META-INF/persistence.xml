@@ -2,10 +2,10 @@
 <persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
   <persistence-unit name="timeLoggerPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-    <class>com.dovydasvenckus.timelogger.domain.Project</class>
-    <class>com.dovydasvenckus.timelogger.domain.User</class>
-    <class>com.dovydasvenckus.timelogger.domain.Tag</class>
-    <class>com.dovydasvenckus.timelogger.domain.TimeLogEntry</class>
+    <class>com.dovydasvenckus.sample.domain.Project</class>
+    <class>com.dovydasvenckus.sample.domain.User</class>
+    <class>com.dovydasvenckus.sample.domain.Tag</class>
+    <class>com.dovydasvenckus.sample.domain.TimeLogEntry</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"/>
       <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
